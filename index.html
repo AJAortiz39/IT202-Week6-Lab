@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;"></canvas>
+
+<script>
+var canvas_bg = document.getElementById("myCanvas");
+var ctx_bg = canvas_bg.getContext("2d");
+ctx_bg.fillStyle = "pink";
+ctx_bg.fillRect(0, 0, canvas_bg.width, canvas_bg.height);
+    
+    
+//(100,50,"blue")
+function draw_A(x,y,z){
+    var canvas_a = document.getElementById("myCanvas");
+    var ctx_a = canvas_a.getContext("2d");
+    ctx_a.beginPath(); 
+    ctx_a.moveTo(250,350);
+    
+    ctx_a.lineTo(x + 150,250);
+   // ctx_a.lineTo(250,250);
+    ctx_a.lineTo(x + 100,y + 200);
+    ctx_a.lineTo(x + 100,y + 300);
+    ctx_a.lineTo(x + 100,y + 240);
+    ctx_a.lineTo(x + 150,y + 240);
+    ctx_a.strokeStyle = z;
+    ctx_a.stroke();
+}    
+
+//(100,50,"green")    
+function draw_B(x,y,z){
+   var canvas_b = document.getElementById("myCanvas");
+    var ctx_b = canvas_b.getContext("2d");
+    ctx_b.beginPath();
+    ctx_b.moveTo(x+175,y+300);
+    ctx_b.lineTo(x+175,y+200);
+    ctx_b.lineTo(x+225,y+200);
+    ctx_b.lineTo(x+225,y+300);
+    ctx_b.lineTo(x+225,y+250);
+    ctx_b.lineTo(x+175,y+250);
+    ctx_b.lineTo(x+225,y+250);
+    ctx_b.lineTo(x+225,y+300);  
+    ctx_b.lineTo(x+175,y+300);     
+    ctx_b.strokeStyle = z;
+    ctx_b.stroke(); 
+    
+}
+//(100,50,"orange")    
+function draw_C(x,y,z){
+   var canvas_c = document.getElementById("myCanvas");
+   var ctx_c = canvas_c.getContext("2d");
+    ctx_c.beginPath();
+    ctx_c.moveTo(x+250,y+300);
+    ctx_c.lineTo(x+250,y+200);
+    ctx_c.lineTo(x+300,y+200);
+    ctx_c.lineTo(x+300,y+300);
+    ctx_c.lineTo(x+250,y+300); 
+    ctx_c.strokeStyle = z;
+    ctx_c.stroke(); 
+}
+function Main(){
+ 
+    draw_A(100,50,"blue") 
+    draw_B(100,50,"green")
+    draw_C(100,50,"brown")    
+}    
+
+Main()
+</script> 
+
+</body>
+</html>
